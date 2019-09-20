@@ -29,12 +29,16 @@ function wrap(text, width) {
 }
 
 function refreshRadio() {
+  var gendaltr = document.getElementById("genderalter")
   var leeftijd = document.getElementById("leeftijdAltr")
   var relatie = document.getElementById("relatieAltr")
   var kinderen = document.getElementById("kinderenAltr")
   var leeftijdKind = document.getElementById("leeftijdKndAltr")
   var levensplezierAlter = document.getElementById("levensplezierAltr")
 
+  for(var i=0;i<gendaltr.length;i++) {
+    gendaltr[i].checked = false;
+  }
   for(var i=0;i<leeftijd.length;i++) {
     leeftijd[i].checked = false;
   }
@@ -110,6 +114,24 @@ function closeDragPopup() {
 
 // Questions about individuals in the network
 function drawBox(node) {
+  if (currSlide == 3) {
+    var q_x = (node.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(node.x - 142,10);
+    var x = q_x.toString();
+
+    var q_y = node.y - 310;
+    var y = q_y.toString();
+
+    var leeftijd = document.getElementById("genderalter")
+    leeftijd.style.left = x + "px";
+    leeftijd.style.top = y + "px";
+
+    var next_x = (node.x + 250 + 78 > bodyWidth) ? bodyWidth - 90 : Math.max(node.x + 250,410);
+    x = next_x.toString();
+    var next_y = node.y - 95;
+    y = next_y.toString();
+
+    document.getElementById("Next").style.left = x + "px";
+    document.getElementById("Next").style.top = y + "px";
   if (currSlide == 3.5) {
     var q_x = (node.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(node.x - 142,10);
     var x = q_x.toString();

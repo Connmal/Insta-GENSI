@@ -245,35 +245,20 @@ var sourceId;
 // Handles node selections depending on the current slide
 function nodeSelect(d) {
   // Slide 15: select female alters
-  if (currSlide == 3) {
-    altered = true;
-    if (d.name != "You") {
-      if (d.gender == "male") {
-        d3.select(this).style("fill", nodeColor)
-        foci[d.id].y += 150;
-        d.gender = "female";
-      } else {
-        d3.select(this).style("fill", maleColor)
-        d.gender = "male";
-        //foci[d.id].py = foci[d.id].y;
-        foci[d.id].y -= 150;
-      }
-    }
-    restart();
-  }
+  
 
   // Slide 22: select alters with kids
   if (currSlide == 9.2) {
     altered = true;
     if (d.name != "You") {
-      if (d.friends == "ja") {
+      if (d.friends == "Yes") {
         d3.select(this).style("fill", nodeColor)
         foci[d.id].y += 150;
-        d.friends = "nee";
+        d.friends = "No";
       } else {
         d3.select(this).style("fill", friendsColor)
         foci[d.id].y -= 150;
-        d.friends = "ja";
+        d.friends = "Yes";
       }
     }
     restart();

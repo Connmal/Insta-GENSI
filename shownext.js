@@ -81,64 +81,37 @@ function showNext() {
       resetFoci();
 
       document.getElementById("slide3").style.display = "none";
-      document.getElementById("slide4").style.display = "block";
 
       document.getElementById("name_input").style.display = "none";
       currSlide++;
     }
 
   } else if (currSlide == 3) {
-    if (!altered && !checked) {
+    if (askedAbout > 0 && $('input[name=gA]:checked').length == 0 && !checked) {
       promptNonresponse();
       checked = true;
     } else {
-      // Collect data before going on
-      nodes.forEach(function(d) {
-        if (d.id > 0) {
-          answers["q20_" + d.id.toLocaleString(undefined,{minimumIntegerDigits: 2})] = d.gender;
-        }
-      });
-
-      var d = new Date();
-      answers["q20timeStamp"] = (d - startTime) / 1000;
-
-      checked = false;
-      altered = false;
-
-      resetFoci();
-      currSlide += 0.5;
-      setTimeout(function() {
-        showNext();
-      },1000);
-    }
-  } else if (currSlide == 3.5) {
-    if (askedAbout > 0 && $('input[name=lA]:checked').length == 0 && !checked) {
-      promptNonresponse();
-      checked = true;
-    } else {
-      clearColors();
 
       if (askedAbout > 0) {
         // Collect data before going on
-        answers["q21_" + askedAbout.toLocaleString(undefined,{minimumIntegerDigits: 2})] = $('input[name=lA]:checked').val();
+        answers["q20_" + askedAbout.toLocaleString(undefined,{minimumIntegerDigits: 2})] = $('input[name=gA]:checked').val();
 
         document.getElementById("question1_" + askedAbout + "_window").style.display = "none";
         document.getElementById("backdrop1_" + askedAbout).style.display = "none";
         document.getElementById("question1_" + askedAbout).style.display = "none";
       } else {
-        document.getElementById("slide4").style.display = "none";
-        document.getElementById("leeftijdAlter").style.display = "block";
+        document.getElementById("genderalter").style.display = "block";
       }
 
       if (askedAbout == numAlters) {
         // Collect data before going on
         nodes.forEach(function(d) {
           if (d.id > numAlters) {
-            answers["q21_" + d.id.toLocaleString(undefined,{minimumIntegerDigits: 2})] = undefined;
+            answers["q20_" + d.id.toLocaleString(undefined,{minimumIntegerDigits: 2})] = undefined;
           }
         });
         var d = new Date();
-        answers["q21timeStamp"] = (d - startTime) / 1000;
+        answers["q20timeStamp"] = (d - startTime) / 1000;
 
         askedAbout = 0;
         currSlide += 0.5;
@@ -177,6 +150,82 @@ function showNext() {
           .attr("id", "question1_" + askedAbout)
           .attr("x", (currNode.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(currNode.x - q_window_width / 2 - 100,10))
           .attr("dy", currNode.y - 340)
+          .text("What is the gender of " + nodes[askedAbout].name.toUpperCase() + "? It is no problem if you don't know exactly. Please provide your best guess.")
+          .call(wrap, backdrop_width - 20);
+
+        drawBox(currNode);
+      }
+    }
+
+  } else if (currSlide == 3.5) {
+    if (askedAbout > 0 && $('input[name=lA]:checked').length == 0 && !checked) {
+      promptNonresponse();
+      checked = true;
+    } else {
+
+      if (askedAbout > 0) {
+        document.getElementById("question1_" + numAlters + "_window").style.display = "none";
+        document.getElementById("backdrop1_" + numAlters).style.display = "none";
+        document.getElementById("question1_" + numAlters).style.display = "none";
+
+        document.getElementById("genderalter").style.display = "none";
+        // Collect data before going on
+        answers["q21_" + askedAbout.toLocaleString(undefined,{minimumIntegerDigits: 2})] = $('input[name=lA]:checked').val();
+
+        document.getElementById("question1.5_" + askedAbout + "_window").style.display = "none";
+        document.getElementById("backdrop1.5_" + askedAbout).style.display = "none";
+        document.getElementById("question1.5_" + askedAbout).style.display = "none";
+      } else {
+        document.getElementById("leeftijdAlter").style.display = "block";
+      }
+
+      if (askedAbout == numAlters) {
+        // Collect data before going on
+        nodes.forEach(function(d) {
+          if (d.id > numAlters) {
+            answers["q21_" + d.id.toLocaleString(undefined,{minimumIntegerDigits: 2})] = undefined;
+          }
+        });
+        var d = new Date();
+        answers["q21timeStamp"] = (d - startTime) / 1000;
+
+        askedAbout = 0;
+        currSlide += 0.5;
+        //skipped = true;
+        showNext();
+      } else {
+        askedAbout++;
+
+        checked = false;
+        refreshRadio();
+
+        d3.selectAll(".node").attr("opacity", function(d) { return d.index == askedAbout ? 1 : .4 });
+
+        currNode = nodes[askedAbout];
+
+        d3.select("svg").append("rect")
+          .attr("class", "q_window")
+          .attr("id", "question1.5_" + askedAbout + "_window")
+          .attr("rx", 2)
+          .attr("ry", 2)
+          .attr("width", q_window_width)
+          .attr("height", q_window_height)
+          .attr("x", currNode.x - q_window_width / 2)
+          .attr("y", currNode.y - q_window_height / 2);
+
+        d3.select("svg").append("rect")
+          .attr("class", "backdrop")
+          .attr("id", "backdrop1.5_" + askedAbout)
+          .attr("x", (currNode.x - 142 + 500 > bodyWidth) ? bodyWidth - 500 : Math.max(currNode.x - q_window_width / 2 - 110,0))
+          .attr("y", currNode.y - 360)
+          .attr("width", backdrop_width)
+          .attr("height", 310);
+
+        d3.select("svg").append("text")
+          .attr("class", "slideText")
+          .attr("id", "question1.5_" + askedAbout)
+          .attr("x", (currNode.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(currNode.x - q_window_width / 2 - 100,10))
+          .attr("dy", currNode.y - 340)
           .text("What is the age of " + nodes[askedAbout].name.toUpperCase() + "? It is no problem if you don't know exactly. Please provide your best estimate.")
           .call(wrap, backdrop_width - 20);
 
@@ -190,9 +239,9 @@ function showNext() {
     } else {
 
       if (askedAbout == 0) {
-        document.getElementById("question1_" + numAlters + "_window").style.display = "none";
-        document.getElementById("backdrop1_" + numAlters).style.display = "none";
-        document.getElementById("question1_" + numAlters).style.display = "none";
+        document.getElementById("question1.5_" + numAlters + "_window").style.display = "none";
+        document.getElementById("backdrop1.5_" + numAlters).style.display = "none";
+        document.getElementById("question1.5_" + numAlters).style.display = "none";
 
         document.getElementById("leeftijdAlter").style.display = "none";
         document.getElementById("relatieAlter").style.display = "block";

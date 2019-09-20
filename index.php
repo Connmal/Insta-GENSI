@@ -74,6 +74,7 @@
       var skipped = false;
       var currNode = null;
       var nodeColor = '#9CD4D4',
+          otherColor = '#faffa4',
           maleColor = '#a8a4ff',
           friendsColor = '#42f477',
           kidsColor = '#ffc1d8',
@@ -140,6 +141,17 @@
         <input type="radio" name="lA" value="50+" id="lA50+"><label for="lA50+"><span class="questionText">  50+</span></label>
       </form>
     </div>
+
+    <div class="input-group" id="genderalter" method="get">
+      <form id="genderalter">
+        <input type="radio" name="gA" value="Male" id="gAm"><label for="gAm"><span class="questionText">  Male</span></label><br>
+        <input type="radio" name="gA" value="Female" id="gAf"><label for="gAf"><span class="questionText">  Female</span></label><br>
+        <input type="radio" name="gA" value="Other" id="gAo"><label for="gAo"><span class="questionText">  Other</span></label><br>
+        <input type="radio" name="gA" value="Prefer not to say" id="gAp"><label for="gAp"><span class="questionText">  Prefer not to sayn</span></label>
+
+      </form>
+    </div>
+
 
     <div class="input-group" id="relatieAlter" method="get" onsubmit="return false;">
       <form id="relatieAltr">
@@ -575,8 +587,8 @@
     <div class="input-group" id="afsluiting" method="get">
       <form id="afsltng">
         <span class="slideText">Thank you for completing the questionnaire</span><br><br>
-        <span class="slideText">Click on the "LISS" button to return to your personal page. PLEASE DO NOT FORGET THIS: only then will your answers be saved and your reimbursement of € 12.50 added.</span><br><br>
-        <span class="slideText">You can also make a comment about the questionnaire there. You can also comment there if you have entered something wrong by mistake or you wish to specify individuals in your network who identify as a genderr other than male or female.</span><br><br>
+        <span class="slideText">Click on the "LISS" button to return to your personal page. PLEASE DO NOT FORGET THIS: only then will your answers be saved and your reimbursement of £5 added.</span><br><br>
+        <span class="slideText">You can also make a comment about the questionnaire there. You can also comment there if you have entered something wrong by mistake or you wish to specify individuals in your network who identify as a gender other than male or female.</span><br><br>
       </form>
     </div>
 
