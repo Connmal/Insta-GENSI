@@ -84,7 +84,7 @@
           kinderpraatColor = '#ef8f8f',
           answerColor = '#abff48';
 
-
+///Below is the barebones HTML script for the questions and answers whether they be radio buttons or text boxes etc...
       var startTime;
       var answers = [];
     </script>
@@ -102,6 +102,14 @@
       <button type="submit" id="alterSubmit" class="btn btn-default" position="inline" value="Enter" onclick="addAlter()">Add</button>
     </div>
 
+    <div class="input-group" id="genderalter" method="get">
+      <form id="genderaltr">
+        <input type="radio" name="gA" value="Male" id="gAm"><label for="gAm"><span class="questionText">  Male</span></label><br>
+        <input type="radio" name="gA" value="Female" id="gAf"><label for="gAf"><span class="questionText">  Female</span></label><br>
+        <input type="radio" name="gA" value="Other" id="gAo"><label for="gAo"><span class="questionText">  Other</span></label><br>
+        <input type="radio" name="gA" value="Prefer not to say" id="gAp"><label for="gAp"><span class="questionText">  Prefer not to say</span></label>
+        </form>
+    </div>
 
     <div class="input-group" id="leeftijdAlter" method="get">
       <form id="leeftijdAltr">
@@ -142,15 +150,7 @@
       </form>
     </div>
 
-    <div class="input-group" id="genderalter" method="get">
-      <form id="genderalter">
-        <input type="radio" name="gA" value="Male" id="gAm"><label for="gAm"><span class="questionText">  Male</span></label><br>
-        <input type="radio" name="gA" value="Female" id="gAf"><label for="gAf"><span class="questionText">  Female</span></label><br>
-        <input type="radio" name="gA" value="Other" id="gAo"><label for="gAo"><span class="questionText">  Other</span></label><br>
-        <input type="radio" name="gA" value="Prefer not to say" id="gAp"><label for="gAp"><span class="questionText">  Prefer not to sayn</span></label>
 
-      </form>
-    </div>
 
 
     <div class="input-group" id="relatieAlter" method="get" onsubmit="return false;">
@@ -183,7 +183,7 @@
     <div class="input-group" id="leeftijdKindAlter" method="get">
       <form id="leeftijdKndAltr">
         <input type="radio" name="lkA" value="1" id="lkA1"><label for="lkA1"><span class="questionText">  Yes</span></label><br>
-        <input type="radio" name="lkA" value="9" id="lkA2"><label for="lkA2"><span class="questionText">  No</span></label>
+        <input type="radio" name="lkA" value="2" id="lkA2"><label for="lkA2"><span class="questionText">  No</span></label>
       </form>
     </div>
 

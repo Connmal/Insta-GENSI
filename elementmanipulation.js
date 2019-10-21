@@ -29,7 +29,7 @@ function wrap(text, width) {
 }
 
 function refreshRadio() {
-  var gendaltr = document.getElementById("genderalter")
+  var gendaltr = document.getElementById("genderaltr")
   var leeftijd = document.getElementById("leeftijdAltr")
   var relatie = document.getElementById("relatieAltr")
   var kinderen = document.getElementById("kinderenAltr")
@@ -112,8 +112,9 @@ function closeDragPopup() {
   document.getElementById("dragPopup").style.display = "none";
 }
 
-// Questions about individuals in the network
+// Questions about individuals in the network, these are for drag boxes
 function drawBox(node) {
+
   if (currSlide == 3) {
     var q_x = (node.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(node.x - 142,10);
     var x = q_x.toString();
@@ -132,7 +133,7 @@ function drawBox(node) {
 
     document.getElementById("Next").style.left = x + "px";
     document.getElementById("Next").style.top = y + "px";
-  if (currSlide == 3.5) {
+  } else if  (currSlide == 3.5) {
     var q_x = (node.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(node.x - 142,10);
     var x = q_x.toString();
 

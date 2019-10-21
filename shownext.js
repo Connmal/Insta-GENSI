@@ -4,6 +4,7 @@
 // A bit like the main() function
 // ---------------------------------------------------------------------------------------
 
+//Mix of Dutch and English, will annotate each call to show which document its being called.
 function showNext() {
 
 
@@ -15,7 +16,7 @@ function showNext() {
     answers.nomem = $('input[name=nomem]').val();
 
     document.getElementById("Next").style.position="absolute";
-    document.getElementById("slide0").style.display = "none";
+    document.getElementById("slide0").style.display = "none"; //Called from slides.js
 
 
 
@@ -30,7 +31,7 @@ function showNext() {
     d3.selectAll(".node").on('mousedown.drag', null);
     // Q3: The following questions are about people with whom you discuss important matters
 
-    document.getElementById("slide3").style.display = "block";
+    document.getElementById("slide3").style.display = "block";  //Called from slides.js
     document.getElementById("name_input").style.display = "inline-flex";
     document.getElementById("name_input").style.left = string_l + "px";
 
@@ -80,9 +81,9 @@ function showNext() {
       });
       resetFoci();
 
-      document.getElementById("slide3").style.display = "none";
+      document.getElementById("slide3").style.display = "none";  //Called from slides.js
+      document.getElementById("name_input").style.display = "none";  //Called from index.php
 
-      document.getElementById("name_input").style.display = "none";
       currSlide++;
     }
 
@@ -100,7 +101,7 @@ function showNext() {
         document.getElementById("backdrop1_" + askedAbout).style.display = "none";
         document.getElementById("question1_" + askedAbout).style.display = "none";
       } else {
-        document.getElementById("genderalter").style.display = "block";
+        document.getElementById("genderalter").style.display = "block"; //Called from index.php
       }
 
       if (askedAbout == numAlters) {
@@ -152,7 +153,7 @@ function showNext() {
           .attr("dy", currNode.y - 340)
           .text("What is the gender of " + nodes[askedAbout].name.toUpperCase() + "? It is no problem if you don't know exactly. Please provide your best guess.")
           .call(wrap, backdrop_width - 20);
-
+// This part allows us to input the name they entered into the question line so it is customary for each alter.
         drawBox(currNode);
       }
     }
@@ -176,7 +177,7 @@ function showNext() {
         document.getElementById("backdrop1.5_" + askedAbout).style.display = "none";
         document.getElementById("question1.5_" + askedAbout).style.display = "none";
       } else {
-        document.getElementById("leeftijdAlter").style.display = "block";
+        document.getElementById("leeftijdAlter").style.display = "block"; //Called from index.php this is calling the HTML for the age ticky boxes
       }
 
       if (askedAbout == numAlters) {
@@ -231,6 +232,7 @@ function showNext() {
 
         drawBox(currNode);
       }
+      // This part allows us to input the name they entered into the question line so it is customary for each alter.
     }
   } else if (currSlide == 4) {
     if (askedAbout > 0 && ($('input[name=rA]:checked').length == 0 || ($('input[name=rA]:checked').val() == 14 && $('input#rAtextInput').val() == "")) && !checked) {
@@ -244,7 +246,7 @@ function showNext() {
         document.getElementById("question1.5_" + numAlters).style.display = "none";
 
         document.getElementById("leeftijdAlter").style.display = "none";
-        document.getElementById("relatieAlter").style.display = "block";
+        document.getElementById("relatieAlter").style.display = "block"; //This is called from index.php and asks the relationship the alter gholds to the participant
       } else {
         // Collect data before going on
         answers["q22_" + askedAbout.toLocaleString(undefined,{minimumIntegerDigits: 2})] = undefined;
@@ -313,7 +315,7 @@ function showNext() {
           .attr("dy", currNode.y - 330)
           .text("What is your relationship to " + nodes[askedAbout].name.toUpperCase() + " or how do you know them? Entering multiple answers is possible!")
           .call(wrap, backdrop_width - 20);
-
+// This part allows us to input the name they entered into the question line so it is customary for each alter.
         drawBox(currNode);
       }
     }
@@ -322,9 +324,9 @@ function showNext() {
     document.getElementById("Next").style.left = "";
     document.getElementById("Next").style.top = "";
 
-    document.getElementById("slide5").style.display = "block";
-    document.getElementById("fiveBar").style.display = "block";
-    document.getElementById("labelBar1").style.display = "block";
+    document.getElementById("slide5").style.display = "block"; //this is caled from slides.js
+    document.getElementById("fiveBar").style.display = "block"; //This is teling it how many bars to use (In the slides.js you can chose between 4,5 and 6 but could easily be altered to include more.)
+    document.getElementById("labelBar1").style.display = "block"; //Contents of the bars. (labels)
 
     d3.selectAll(".node").attr("opacity", function(d) { return d.index == 0 ? .4 : 1 });
     clearColors();
@@ -355,7 +357,7 @@ function showNext() {
       // Q4: How close is your relationship with each person?
 
       document.getElementById("slide6").style.display = "block";
-      document.getElementById("labelBar2").style.display = "block";
+      document.getElementById("labelBar2").style.display = "block"; //Contents of the bars. (labels), assumes 'fivebar' (as above) until this is dismissed and another is called
 
       restart();
 
@@ -379,13 +381,13 @@ function showNext() {
 
       checked = false;
 
-      document.getElementById("slide6").style.display = "none";
+      document.getElementById("slide6").style.display = "none"; //Called form slides.js
       document.getElementById("labelBar2").style.display = "none";
 
       // Q4: How close is your relationship with each person?
 
-      document.getElementById("slide7").style.display = "block";
-      document.getElementById("labelBar3").style.display = "block";
+      document.getElementById("slide7").style.display = "block"; //Called form slides.js
+      document.getElementById("labelBar3").style.display = "block";//Contents of the bars. (labels), assumes 'fivebar' (as above) until this is dismissed and another is called
 
       restart();
 
@@ -414,7 +416,7 @@ function showNext() {
 
       // Q4: How close is your relationship with each person?
 
-      document.getElementById("slide8").style.display = "block";
+      document.getElementById("slide8").style.display = "block"; //Calls from slides.js
       clearColors();
       restart();
 
@@ -444,9 +446,9 @@ function showNext() {
       document.getElementById("fiveBar").style.display = "none";
       document.getElementById("labelBar3").style.display = "none";
 
-      // Q4: How close is your relationship with each person?
+      // : Who of these are your friends?
 
-      document.getElementById("slide15").style.display = "block";
+      document.getElementById("slide15").style.display = "block"; //calls from slides.js
       d3.selectAll(".node").classed("fixed", function(d) { d.fixed = false});
 
       clearColors();
@@ -469,7 +471,7 @@ function showNext() {
       altered = false;
 
       document.getElementById("slide15").style.display = "none";
-      document.getElementById("slide9").style.display = "block";
+      document.getElementById("slide9").style.display = "block"; //Calls from slides.js
 
       resetFoci();
       clearColors();
@@ -496,7 +498,7 @@ function showNext() {
       altered = false;
 
       document.getElementById("slide9").style.display = "none";
-      document.getElementById("kinderenAlter").style.display = "block";
+      document.getElementById("kinderenAlter").style.display = "block"; //These (kindren/leeftijkind) are the ticky boxes for whether the alter follow them on instagram or not.
       document.getElementById("leeftijdKindAlter").style.display = "block";
 
       resetFoci();
@@ -603,7 +605,7 @@ function showNext() {
             .attr("dy", currNode.y - 70)
             .text("Do you follow " + currNode.name.toUpperCase() + " on Instagram?")
             .call(wrap, backdrop_width + 10);
-
+// This part allows us to input the name they entered into the question line so it is customary for each alter.
           drawBox(currNode);
         }
       }
@@ -718,7 +720,7 @@ document.getElementById("slide14").style.display = "block";
       $("#contactMet2").text("With who does " + currNode.name.toUpperCase() + " have contact? By contact we mean all forms of contact, such as personal contact, contact via (mobile) telephone, mail, email, sms, and other ways of online and offline communication.");
       d3.selectAll("#contactMet2").call(wrap, textWidth);
       $("#contactMet3").attr("y", text_offset_top + lineHeight * ($('#slide14 .slideText tspan').length + $('#slide14 .slideText').length-1))
-
+// This part allows us to input the name they entered into the question line so it is customary for each alter. (specifically for showing who knows who. Allowing participants to more easily and reliably show each of th ties)
       foci[askedAbout].px = foci[askedAbout].x
       foci[askedAbout].py = foci[askedAbout].y
 
@@ -745,6 +747,7 @@ document.getElementById("slide14").style.display = "block";
         answers.q37timeStamp = (d - startTime) / 1000;
       }
       // Collect data before going on
+      // Loneliness Questions signified by the 'lo(number)' Called from the index.php 2 questions per page
 
 
       document.getElementById("loneliness1").style.display = "none";
@@ -1045,7 +1048,7 @@ document.getElementById("slide14").style.display = "block";
         answers.q47timeStamp = (d - startTime) / 1000;
       }
       // Collect data before going on
-
+// Instagram Questions signified by the 'in(number)' Called from the index.php 2 questions per page
 
       document.getElementById("insta1").style.display = "none";
       var ex = document.getElementById("insta3");
@@ -1135,7 +1138,7 @@ document.getElementById("slide14").style.display = "block";
         answers.q50timeStamp = (d - startTime) / 1000;
       }
       // Collect data before going on
-
+     // HADS Questions signified by the 'ha(number)' Called from the index.php 2 questions per page
 
       document.getElementById("HADS1").style.display = "none";
       var ex = document.getElementById("HADS3");
@@ -1344,8 +1347,8 @@ document.getElementById("slide14").style.display = "block";
       ex.style.top = string_t;
       ex.style.display = "block";
 
-      checked = false;
-
+    checked = false;
+//Asking about how people reported their network, called from the index.php.
       currSlide++;
       showNext();
     }

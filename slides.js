@@ -128,30 +128,6 @@ slide3.append("text")
 slide3.style("display", "none");
 
 // Slide 4
-
-var slide4 = d3.select("svg").append("g")
-  .attr("id", "slide4");
-slide4.append("rect")
-  .style("fill", "white")
-  .attr("class", "slide")
-  .attr("x", 0)
-  .attr("y", 0)
-  .attr("width", bodyWidth)
-  .attr("height", bodyHeight);
-slide4.append("text")
-  .attr("class", "slideText")
-  .attr("x", center - (textWidth / 2))
-  .attr("y", text_offset_top)
-  .text("Which of these people identify as male?")
-  .call(wrap, textWidth);
-slide4.append("text")
-  .attr("class", "slideText")
-  .attr("x", center - (textWidth / 2))
-  .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-  .text("Click on the person's name if they identify as a male, the circle will change colour. If you have clicked the wrong person by mistake, you can correct this by clicking on the person again. At the end of the survey, there will be a chance to add an information that is missed. Please note down on some paper if there are any individuals who identify neither as male or female in the people you reported. Please record these notes in the slide at the end.")
-  .call(wrap, textWidth);
-slide4.style("display", "none");
-
 // Slide 5
 
 var slide5 = d3.select("svg").append("g")

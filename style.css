@@ -393,6 +393,10 @@ g#0 {
   position: absolute;
   display: none;
 }
+#genderalter {
+  position: absolute;
+  display: none;
+}
 
 #leeftijdAlter {
   position: absolute;
@@ -404,6 +408,7 @@ g#0 {
   -moz-column-count: 4; /* Firefox */
   column-count: 4;
 }
+
 
 #relatieAlter {
   position: absolute;

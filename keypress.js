@@ -14,7 +14,7 @@ $(document).ready(function(){
 $(document).keypress(function(ev){
   //console.log($(".popop_box:visible"));
   //If user pressed Enter Key then trigger Submit click
-  if(ev.keyCode==13 && currSlide != 2 && currSlide != 3 && (currSlide < 6 || currSlide >= 10) && currSlide != 13 && currSlide != 14 && $(".popop_box:visible").length == 0)
+  if(ev.keyCode==13 && currSlide != 2 &&  (currSlide < 6 || currSlide >= 10) && currSlide != 13 && currSlide != 14 && $(".popop_box:visible").length == 0)
   {
     if(document.getElementById("Next").disabled != true) $('#Next').click();
   }
