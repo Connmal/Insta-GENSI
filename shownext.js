@@ -151,7 +151,7 @@ function showNext() {
           .attr("id", "question1_" + askedAbout)
           .attr("x", (currNode.x - 142 + 500 > bodyWidth) ? bodyWidth - 490 : Math.max(currNode.x - q_window_width / 2 - 100,10))
           .attr("dy", currNode.y - 340)
-          .text("What is the gender of " + nodes[askedAbout].name.toUpperCase() + "? It is no problem if you don't know exactly. Please provide your best guess.")
+          .text("What is the gender of " + nodes[askedAbout].name.toUpperCase() + "? If you're unsure how they identify, please provide your best guess.")
           .call(wrap, backdrop_width - 20);
 // This part allows us to input the name they entered into the question line so it is customary for each alter.
         drawBox(currNode);
