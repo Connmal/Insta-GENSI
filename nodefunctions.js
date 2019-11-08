@@ -245,9 +245,9 @@ var sourceId;
 // Handles node selections depending on the current slide
 function nodeSelect(d) {
   // Slide 15: select female alters
-  
 
-  // Slide 22: select alters with kids
+
+  // Do you consider them friends?
   if (currSlide == 9.2) {
     altered = true;
     if (d.name != "You") {
@@ -264,7 +264,7 @@ function nodeSelect(d) {
     restart();
   }
 
-  // Slide 22: select alters with kids
+  //
   if (currSlide == 9.5) {
     altered = true;
     if (d.name != "You") {
