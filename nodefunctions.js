@@ -244,7 +244,7 @@ var sourceId;
 
 // Handles node selections depending on the current slide
 function nodeSelect(d) {
-  // Slide 15: select female alters
+  
 
 
   // Do you consider them friends?
