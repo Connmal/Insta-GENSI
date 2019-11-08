@@ -152,7 +152,6 @@
 
 
 
-
     <div class="input-group" id="relatieAlter" method="get" onsubmit="return false;">
       <form id="relatieAltr">
         <input type="checkbox" name="rA" value="1" id="rA1"><label for="rA1"><span class="questionText">  Partner</span></label><br>
@@ -192,7 +191,7 @@
         <input type="radio" name="lpA" value="1" id="lpA1"><label for="lpA1"><span class="questionText">  More than once a day</span></label><br>
         <input type="radio" name="lpA" value="2" id="lpA2"><label for="lpA2"><span class="questionText">  Atleast once a day</span></label><br>
         <input type="radio" name="lpA" value="3" id="lpA4"><label for="lpA4"><span class="questionText">  A few times a week</span></label><br>
-        <input type="radio" name="lpA" value="4" id="lpA3"><label for="lpA3"><span class="questionText">  Atleast once a week</span></label><br>
+        <input type="radio" name="lpA" value="4" id="lpA3"><label for="lpA3"><span class="questionText">  At least once a week</span></label><br>
         <input type="radio" name="lpA" value="5" id="lpA5"><label for="lpA5"><span class="questionText">  Less than once a week</span></label>
       </form>
     </div>

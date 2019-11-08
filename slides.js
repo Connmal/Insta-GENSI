@@ -149,7 +149,7 @@ slide5.append("text")
   .attr("class", "slideText")
   .attr("x", center - (textWidth / 2))
   .attr("y", text_offset_top + lineHeight * ($('#slide5 .slideText tspan').length + $('#slide5 .slideText').length-1))
-  .text("Drag the cricles with your mouse to the different answers at the bottom on the screen, the circles will change colour when they are placed in a box.")
+  .text("Drag the circles with your mouse to the different answers at the bottom on the screen, the circles will change colour when they are placed in a box.")
   .call(wrap, textWidth);
 slide5.style("display", "none");
 
@@ -168,7 +168,7 @@ slide6.append("text")
   .attr("class", "slideText")
   .attr("x", center - (textWidth / 2))
   .attr("y", text_offset_top)
-  .text("To the best of your knowledge, what is the highest level of education that htese people have completed?")
+  .text("To the best of your knowledge, what is the highest level of education that these people have completed?")
   .call(wrap, textWidth);
 slide6.append("text")
   .attr("class", "slideText")
@@ -205,7 +205,7 @@ slide7.append("text")
   .attr("class", "slideText")
   .attr("x", center - (textWidth / 2))
   .attr("y", text_offset_top + lineHeight * ($('#slide7 .slideText tspan').length + $('#slide7 .slideText').length-1))
-  .text("Drag the cricles with your mouse to the different answers at the bottom on the screen, the circles will change colour when they are placed in a box.")
+  .text("Drag the circles with your mouse to the different answers at the bottom on the screen, the circles will change colour when they are placed in a box.")
   .call(wrap, textWidth);
 slide7.style("display", "none");
 
@@ -230,7 +230,7 @@ slide8.append("text")
   .attr("class", "slideText")
   .attr("x", center - (textWidth / 2))
   .attr("y", text_offset_top + lineHeight * ($('#slide8 .slideText tspan').length + $('#slide8 .slideText').length-1))
-  .text("Drag the cricles with your mouse to the different answers at the bottom on the screen, the circles will change colour when they are placed in a box.")
+  .text("Drag the circles with your mouse to the different answers at the bottom on the screen, the circles will change colour when they are placed in a box.")
   .call(wrap, textWidth);
 slide8.style("display", "none");
 
