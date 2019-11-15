@@ -24,7 +24,7 @@ function showNext() {
 
 
     currSlide += 0.1;
-    showNext();
+
   } else if (currSlide == 1.1) {
     if (($('input[name=code]:checked').length == 0 && !checked && !skipped) {
       promptNonresponse();
@@ -37,7 +37,7 @@ function showNext() {
         answers.q15timeStamp = (d - startTime) / 1000;
       } else {
         answers.q15 = "skipped";
-      }}
+      }
       // Collect data before going on
 
 
@@ -51,6 +51,7 @@ function showNext() {
       checked = false;
 
       currSlide+= 0.1;
+    }
     } else if (currSlide == 1.2) {
       if (($('input[name=gender]:checked').length == 0 && !checked && !skipped) {
         promptNonresponse();
@@ -63,7 +64,7 @@ function showNext() {
           answers.q16timeStamp = (d - startTime) / 1000;
         } else {
           answers.q16 = "skipped";
-        }}
+        }
         // Collect data before going on
 
 
@@ -77,7 +78,7 @@ function showNext() {
         checked = false;
 
         currSlide+= 0.1;
-
+}
       } else if (currSlide == 1.3) {
         if (($('input[name=age]:checked').length == 0 && !checked && !skipped) {
           promptNonresponse();
@@ -90,7 +91,7 @@ function showNext() {
             answers.q17timeStamp = (d - startTime) / 1000;
           } else {
             answers.q17 = "skipped";
-          }}
+          }
           // Collect data before going on
 
 
@@ -104,6 +105,7 @@ function showNext() {
           checked = false;
 
           currSlide+= 0.1;
+        }
 
         } else if (currSlide == 1.4) {
           if (($('input[name=nation]:checked').length == 0 && !checked && !skipped) {
@@ -117,12 +119,13 @@ function showNext() {
               answers.q18timeStamp = (d - startTime) / 1000;
             } else {
               answers.q18 = "skipped";
-            }}
+            }
               document.getElementById("nation_input").style.display = "none";
 
               checked = false;
 
               currSlide+= 0.1;
+            }
 
   } else if (currSlide == 1.5) {
 
