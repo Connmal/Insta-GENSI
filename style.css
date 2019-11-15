@@ -174,11 +174,24 @@ g#0 {
   top: 280px;
   left: 35%;
 }
-
-#gender_input {
+#code_input{
   position: absolute;
   display: none;
 }
+#age_input{
+  position: absolute;
+  display: none;
+}
+
+#gender_input{
+  position: absolute;
+  display: none;
+}
+#nation_input{
+  position: absolute;
+  display: none;
+}
+
 #loneliness1 {
   position: absolute;
   display: none;

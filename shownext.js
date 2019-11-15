@@ -17,12 +17,112 @@ function showNext() {
 
     document.getElementById("Next").style.position="absolute";
     document.getElementById("slide0").style.display = "none"; //Called from slides.js
+    var ex = document.getElementById("code_input");
+    ex.style.left = string_l + "px";
+    ex.style.top = string_t;
+    ex.style.display = "block";
 
 
-
-    currSlide += 0.5;
+    currSlide += 0.1;
     showNext();
+  } else if (currSlide == 1.1) {
+    if (($('input[name=code]:checked').length == 0 && !checked && !skipped) {
+      promptNonresponse();
+      checked = true;
+    } else {
+      // Collect data before going on
+      if(!skipped) {
+        answers.q15 = $('input[name=code]:checked').val();
+        var d = new Date();
+        answers.q15timeStamp = (d - startTime) / 1000;
+      } else {
+        answers.q15 = "skipped";
+      }}
+      // Collect data before going on
 
+
+
+      document.getElementById("code_input").style.display = "none";
+      var ex = document.getElementById("gender_input");
+      ex.style.left = string_l + "px";
+      ex.style.top = string_t;
+      ex.style.display = "block";
+
+      checked = false;
+
+      currSlide+= 0.1;
+    } else if (currSlide == 1.2) {
+      if (($('input[name=gender]:checked').length == 0 && !checked && !skipped) {
+        promptNonresponse();
+        checked = true;
+      } else {
+        // Collect data before going on
+        if(!skipped) {
+          answers.q16 = $('input[name=gender]:checked').val();
+          var d = new Date();
+          answers.q16timeStamp = (d - startTime) / 1000;
+        } else {
+          answers.q16 = "skipped";
+        }}
+        // Collect data before going on
+
+
+
+        document.getElementById("gender_input").style.display = "none";
+        var ex = document.getElementById("age_input");
+        ex.style.left = string_l + "px";
+        ex.style.top = string_t;
+        ex.style.display = "block";
+
+        checked = false;
+
+        currSlide+= 0.1;
+
+      } else if (currSlide == 1.3) {
+        if (($('input[name=age]:checked').length == 0 && !checked && !skipped) {
+          promptNonresponse();
+          checked = true;
+        } else {
+          // Collect data before going on
+          if(!skipped) {
+            answers.q17 = $('input[name=age]:checked').val();
+            var d = new Date();
+            answers.q17timeStamp = (d - startTime) / 1000;
+          } else {
+            answers.q17 = "skipped";
+          }}
+          // Collect data before going on
+
+
+
+          document.getElementById("age_input").style.display = "none";
+          var ex = document.getElementById("nation_input");
+          ex.style.left = string_l + "px";
+          ex.style.top = string_t;
+          ex.style.display = "block";
+
+          checked = false;
+
+          currSlide+= 0.1;
+
+        } else if (currSlide == 1.4) {
+          if (($('input[name=nation]:checked').length == 0 && !checked && !skipped) {
+            promptNonresponse();
+            checked = true;
+          } else {
+            // Collect data before going on
+            if(!skipped) {
+              answers.q18 = $('input[name=nation]:checked').val();
+              var d = new Date();
+              answers.q18timeStamp = (d - startTime) / 1000;
+            } else {
+              answers.q18 = "skipped";
+            }}
+              document.getElementById("nation_input").style.display = "none";
+
+              checked = false;
+
+              currSlide+= 0.1;
 
   } else if (currSlide == 1.5) {
 

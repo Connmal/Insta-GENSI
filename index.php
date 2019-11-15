@@ -97,6 +97,46 @@
     <script src="shownext.js"></script>
     <script src="keypress.js"></script>
 
+    <div class="input-group" id="code_input" method="get" display="none" onsubmit ="return false;">
+      <form id="CodeID">
+      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study. (Make sure it is not your email or any other personally identifiable information)</span>
+        <input type="text" name="code" class="form-control" placeholder="..." size="10"><br><br>
+      </form>
+      </div>
+
+
+    <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
+      <form id="AgeID">
+      <span class="slideText">Please state your age in years. Use a numerical value. (For example : 21)</span>
+        <input type="text" name="age" class="form-control" placeholder="" size="10"><br><br>
+        </form>
+      </div>
+
+
+    </div>
+    <div class="input-group" display="none" id="gender_input" method="get">
+      <form id="genderuser" display="none">
+        <span class="slideText">Please select your gender.</span><br><br>
+        <input type="radio" name="gender" value="Male"><span class="questionText"> Male</span><br>
+        <input type="radio" name="gender" value="Female"><span class="questionText"> Female </span><br>
+        <input type="radio" name="gender" value="Other"><span class="questionText"> Other</span><br>
+        <input type="radio" name="gender" value="Prefer_Not_To_Say"><span class="questionText"> Prefer Not To Say</span><br>
+
+      </form>
+    </div>
+
+  </div>
+  <div class="input-group" display="none" id="nation_input" method="get">
+    <form id="nationuser" display="none">
+      <span class="slideText">Please select your nationality.</span><br><br>
+      <input type="radio" name="nation" value="British"><span class="questionText"> British</span><br>
+      <input type="radio" name="nation" value="American"><span class="questionText"> American </span><br>
+      <input type="radio" name="nation" value="Other"><span class="questionText"> Other</span><br>
+      <input type="radio" name="nation" value="Prefer_Not_To_Say"><span class="questionText"> Prefer Not To Say</span><br>
+
+    </form>
+  </div>
+
     <div class="input-group" id="name_input" method="get" onsubmit="addAlter()">
       <input type="text" id="alterName" class="form-control" placeholder="Name" size="10">
       <button type="submit" id="alterSubmit" class="btn btn-default" position="inline" value="Enter" onclick="addAlter()">Add</button>
