@@ -26,7 +26,7 @@ function showNext() {
     currSlide += 0.1;
 
   } else if (currSlide == 1.1) {
-    if (($('input[name=code]:checked').length == 0 && !checked && !skipped) {
+    if (($('input[name=code]:checked').val().length == 0) && !checked && !skipped) {
       promptNonresponse();
       checked = true;
     } else {
@@ -53,7 +53,7 @@ function showNext() {
       currSlide+= 0.1;
     }
     } else if (currSlide == 1.2) {
-      if (($('input[name=gender]:checked').length == 0 && !checked && !skipped) {
+      if (($('input[name=gender]:checked').length == 0) && !checked && !skipped) {
         promptNonresponse();
         checked = true;
       } else {
@@ -80,7 +80,7 @@ function showNext() {
         currSlide+= 0.1;
 }
       } else if (currSlide == 1.3) {
-        if (($('input[name=age]:checked').length == 0 && !checked && !skipped) {
+        if (($('input[name=age]:checked').val().length == 0) && !checked && !skipped) {
           promptNonresponse();
           checked = true;
         } else {
@@ -108,7 +108,7 @@ function showNext() {
         }
 
         } else if (currSlide == 1.4) {
-          if (($('input[name=nation]:checked').length == 0 && !checked && !skipped) {
+          if (($('input[name=nation]:checked').length == 0) && !checked && !skipped) {
             promptNonresponse();
             checked = true;
           } else {

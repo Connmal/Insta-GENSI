@@ -104,15 +104,6 @@
       </form>
       </div>
 
-
-    <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
-      <form id="AgeID">
-      <span class="slideText">Please state your age in years. Use a numerical value. (For example : 21)</span>
-        <input type="text" name="age" class="form-control" placeholder="" size="10"><br><br>
-        </form>
-      </div>
-
-
     </div>
     <div class="input-group" display="none" id="gender_input" method="get">
       <form id="genderuser" display="none">
@@ -121,9 +112,16 @@
         <input type="radio" name="gender" value="Female"><span class="questionText"> Female </span><br>
         <input type="radio" name="gender" value="Other"><span class="questionText"> Other</span><br>
         <input type="radio" name="gender" value="Prefer_Not_To_Say"><span class="questionText"> Prefer Not To Say</span><br>
-
       </form>
     </div>
+
+    <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
+      <form id="AgeID">
+      <span class="slideText">Please state your age in years. Use a numerical value. (For example : 21)</span>
+        <input type="text" name="age" class="form-control" placeholder="" size="10"><br><br>
+        </form>
+      </div>
+
 
   </div>
   <div class="input-group" display="none" id="nation_input" method="get">
