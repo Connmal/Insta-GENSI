@@ -25,7 +25,7 @@ if (isIE()) {
     .attr("y", text_offset_top + title_offset_top + lineHeight)
     .text("Please us a different browser for this survey.")
     .call(wrap, textWidth);
-  document.getElementById("Next").style.display="none";
+
 } else {
   var slide0 = d3.select("svg").append("g")
     .attr("id", "slide0");
@@ -65,6 +65,248 @@ if (isIE()) {
     .text("As already mentioned, you cannot return to your previous answers, so check your answers carefully before moving on to the next question. If you have entered a wrong answer, you can probably write it on a piece of paper. At the end of the questionnaire you will still have the opportunity to report what you have entered incorrectly by mistake.")
     .call(wrap, textWidth);
 }
+var slide_1 = d3.select("svg").append("g")
+  .attr("id", "slide1")
+slide_1.append("rect")
+  .style("fill", "white")
+  .attr("x", 0)
+  .attr("y", 0)
+  .attr("width", bodyWidth)
+  .attr("height", bodyHeight);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight)
+  .text("Please read the following slide before continuing. Clicking 'Continue' demonstrates you have read and understood the information below.")
+  .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+  .text("PARTICIPANT INFORMATION.")
+  .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+  .text("You are being invited to take part in this research study.  Before you decide it is important for you to read this slide so you understand why the study is being carried out and what it will involve.")
+  .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 3)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 12)
+  .text("What is the purpose of this study?")
+  .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 16)
+  .text("The aim of this research is to understand how Instagram affects offline personal social networks and person well-being.")
+  .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 3)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 20)
+  .text("Why have I been invited?")
+ .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 24)
+  .text("It is important that we assess as many people as possible and you have indicated that you are interested in taking part in this study, and that you are an adult aged 18 or over, use Instagram regularly and have a reasonable understanding of English.")
+  .call(wrap, textWidth);
+slide_1.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 3)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 28)
+  .text("Do I have to take apart?")
+ .call(wrap, textWidth);
+slide_1.append("text")
+ .attr("class", "slideText")
+ .attr("x", center - textWidth / 2)
+ .attr("y", text_offset_top + title_offset_top + lineHeight * 32)
+ .text("No. It is up to you whether you would like to take part in the study.  I am giving you this information to help you make that decision. If you do decide to take part, remember that you can stop being involved in the study whenever you choose, without telling me why.  You are completely free to decide whether to take part, or to take part and then leave the study before completion.  If you no longer want to take part, simply close your browser.")
+ .call(wrap, textWidth);
+slide_1.append("text")
+ .attr("class", "slideText")
+ .attr("x", center - textWidth / 3)
+ .attr("y", text_offset_top + title_offset_top + lineHeight * 40)
+ .text("What will happen if I take part?")
+ .call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 44)
+.text("You will be asked complete a survey that will last 30-45 minutes which consists of questions about your social network and your perceived emotional closeness to network members. You will be asked information pertaining to your Instagram use as well as people you follow in regard to their relation to your offline social network. And then finally you will be asked to rate yourself on several statements related to your social relationships (ed., on the importance of friendships), Instagram use, and emotions you experience (e.g., low mood). For taking part you will receive £5 as part of the Prolific monetary renumeration.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 50)
+.text("What are the possible disadvantages of taking part?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 54)
+.text("Considering the nature of this research, participants may find questions about social relationships and emotions, disconcerting and may feel uncomfortable answering such questions. However, the research will not gather and personal information about you such as your name, your email address or your IP. Any information given about your social network members and Instagram data will be anonymised during analysis and into randomly generated number codes. However, in the unlikely event that you feel uncomfortable about answering some of fields in this survey you are able to stop the survey at any time (simply close the browser). If you have completed the research already but have changed your mind on whether you wish to have your information used, you may use the code in which you inputted at the beginning of this survey to email the interviewer or a researcher on the team (emails below) so you can withdraw your information.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 64)
+.text("Will my taking part in this study be kept confidential and anonymous?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 68)
+.text("Yes.  Your name will not be written on any of the data we collect; the written information you provide will be related to your participant number you are given along with this information sheet. Your name or the names you input in the social networks you describe will not appear in any reports or documents resulting from this study. The data collected from you in this study will be confidential.  Anonymised data from this study will be posted on the open science framework (http://osf.io) in line with current scientific practice.  ")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 74)
+.text("How will my data be stored, and how long will it be stored for?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 78)
+.text("All data from the survey will be stored on the University U drive, which is password protected.  All data will be stored in accordance with University guidelines and the Data Protection Act (2018).  No personally identifiable data will be stored. After removing the information on your network, the data will also be made available on the open science framework (http://osf.io) however all this data will be anonymous. Should you not want your anonymized data to become public, then please do not take part.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 86)
+.text("What categories of personal data will be collected and processed in this study?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 90)
+.text("This research will collect basic demographic variables (Gender, age etc.) You will also provide data surrounding your Instagram use, and information about your social network members (first names/initials/nicknames).")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 94)
+.text("What is the legal basis for processing personal data?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 98)
+.text("All data collected in this study are processed in line with GDPR Article 6(1) e: processing is necessary for the performance of a task carried out in the public interest.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 102)
+.text("Who are the recipients or categories of recipients of personal data, if any?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 106)
+.text("The researchers Connor Malcolm, Dr Samuel Roberts and Dr. Thomas Pollet at Northumbria university and Liverpool John Moores University . No other researchers will be involved in the handling of the raw data.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 110)
+.text("What will happen to the results of the study and could personal data collected be used in future research?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 114)
+.text("The general findings might be reported in a scientific journal or presented at a research conference, however the data will be anonymized, and you will not be personally identifiable. We can provide you with a summary of the findings from the study if you email the researcher at the address listed below. Anonymized data will be posted on the open science framework in order to comply with the norm of transparency in research. Researchers and academics will have access to this research data through the open science framework (http://osf.io). Should you not want your anonymized data to be shared, then please do not take part.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 122)
+.text("Who is Organizing and Funding the Study?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 126)
+.text("Northumbria University health and Life Sciences department. Instagram research grant.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 130)
+.text("Who has reviewed this study?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 134)
+.text("The Faculty of Health and Life Sciences Research Ethics Committee at Northumbria University have reviewed the study in order to safeguard your interests and have granted approval to conduct the study.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 138)
+.text("What are my rights as a participant in this study?")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 142)
+.text("1.	You have the rights to the right to be informed, the right of access, the right to rectification, the right to erasure, the right to restrict processing, the right to data portability, the right to object and rights in relation to automated decision making and profiling. You have a right of access to a copy of the information comprised in your personal data (to do so you should submit a Subject Access Request); you have a right in certain circumstances to have inaccurate personal data rectified; and a right to object to decisions being taken by automated means. If dissatisfied with the University’s processing of personal data, you have the right to complain to the Information Commissioner’s Office. ")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 3)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 152)
+.text("Contact for further information")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 154)
+.text("Researcher email: connor.malcolm@northumbria.ac.uk.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 156)
+.text("Supervisor email: thomas.pollet@northumbria.ac.uk.")
+.call(wrap, textWidth);
+slide_1.append("text")
+.attr("class", "slideText")
+.attr("x", center - textWidth / 2)
+.attr("y", text_offset_top + title_offset_top + lineHeight * 158)
+.text("Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk).")
+.call(wrap, textWidth);
+slide_1.style("display", "none");
+
+var slide_2 = d3.select("svg").append("g")
+  .attr("id", "slide2");
+slide_2.append("rect")
+  .style("fill", "white")
+  .attr("x", 0)
+  .attr("y", 0)
+  .attr("width", bodyWidth )
+  .attr("height", bodyHeight);
+slide_2.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight)
+  .text("If you would like to take part in this study, please read the statement below and click ‘Continue’")
+  .call(wrap, textWidth);
+slide_2.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+  .text("I understand the nature of the study, and what is required from me. I understand that after I participate I will receive a debrief providing me with information about the study and contact details for the researcher.  I understand I am free to withdraw from the study at any time, without having to give a reason for withdrawing, and without prejudice. I agree to provide information to the investigator and understand that my contribution will remain confidential. I also consent to the retention of this data under the condition that any subsequent use also be restricted to research projects that have gained ethical approval from Northumbria University.")
+  .call(wrap, textWidth);
+  slide_2.style("display", "none");
+
 
 // Slide 3
 
@@ -193,7 +435,7 @@ slide7.append("text")
   .attr("class", "slideText")
   .attr("x", center - (textWidth / 2))
   .attr("y", text_offset_top)
-  .text("How often do you have personal contact with these people??")
+  .text("How often do you have personal contact with these people?")
   .call(wrap, textWidth);
 slide7.append("text")
   .attr("class", "slideText")
@@ -314,7 +556,7 @@ slide15.append("text")
   .attr("class", "slideText")
   .attr("x", center - (textWidth / 2))
   .attr("y", text_offset_top)
-  .text("Which of these people do you consider to be a friend??")
+  .text("Which of these people do you consider to be a friend?")
   .call(wrap, textWidth);
 slide15.append("text")
   .attr("class", "slideText")
@@ -323,3 +565,89 @@ slide15.append("text")
   .text("Click on the person's name if you consider them to be a friend - the circle will change color. If you have clicked the wrong person by mistake, you can restore this choice by clicking the name of this person again.")
   .call(wrap, textWidth);
 slide15.style("display", "none");
+
+//Slide 16
+
+var slide16 = d3.select("svg").append("g")
+  .attr("id", "slide16");
+slide16.append("rect")
+  .style("fill", "white")
+  .attr("class", "slide")
+  .attr("x", 0)
+  .attr("y", 0)
+  .attr("width", bodyWidth)
+  .attr("height", bodyHeight);
+slide16.append("text")
+  .attr("class", "slideText numfri")
+  .attr("x", center - (textWidth / 2))
+  .attr("y", text_offset_top)
+  .text("PARTICIPANT DEBRIEF")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 3)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+  .text("What was the purpose of the project?")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+  .text("This project aimed to explain how Instagram use influences offline personal social networks and personal well-being. The study considered loneliness, and a non-diagnostic survey measure relating to anxiety and depression and how they relate to your social network and Instagram use. In the unlikely event that this questionnaire affected your mood state, and should you feel the desire to talk to someone, then please contact the Samaritans.")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 3)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 16)
+  .text("How will I find out about the results?")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 20)
+  .text("After approximately 1-2 months, once the data analysis has been completed the researchers Connor Malcolm  (connor.malcolm@northumbria.ac.uk)) will email you a general summary of the results of this research, upon email request.")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 3)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 24)
+  .text("If I change my mind and wish to withdraw the information I have provided, how do I do this?")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 28)
+  .text("If you wish to withdraw your data then email the investigator (connor.malcolm@northumbria .ac.uk) or their supervisor (thomas.pollet@northumbria.ac.uk) within 1 week of taking part and give them the code word (that you input on the survey) After this time it might not be possible to withdraw your data as it could already have been processed and analysed.")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 34)
+  .text("The data collected in this study may also be published in scientific journals or presented at conferences.  Information and data gathered during this research study will only be available to the research team identified in the information sheet. Should the research be presented or published in any form, all data will be anonymous (i.e. your personal information or data will not be identifiable). It will be hosted on the open science framework, Should you not want this, then please contact the researchers and request removal of your data. Note however, that at no point will your personal information or data be revealed. ")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 42)
+  .text("All information and data gathered during this research will be stored in line with the Data Protection Act and GDPR. The anonymised data might be stored indefinitely in order to comply with good scientific practice. Should you not want this, then please contact the researchers and request removal of your data. Note however, that at no point will your personal information or data be revealed. ")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 50)
+  .text("If you wish to receive feedback about the findings of this research study, then please contact the researcher at connor.malcolm@northumbria.ac.uk.")
+  .call(wrap, textWidth);
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 54)
+  .text("This study and its protocol have received full ethical approval from Faculty of Health and Life Sciences Research Ethics Committee. If you require confirmation of this, or if you have any concerns or worries concerning this research, or if you wish to register a complaint, please contact the Chair of this Committee, santosh.vijaykumar@northumbria.ac.uk stating the title of the research project and the name of the researcher.")
+  .call(wrap, textWidth);
+slide16.style("display", "none");
+slide16.append("text")
+  .attr("class", "slideText")
+  .attr("x", center - textWidth / 2)
+  .attr("y", text_offset_top + title_offset_top + lineHeight * 64)
+  .text("Thank you for participating in this survey. You may now close the browser.")
+  .call(wrap, textWidth);
+slide16.style("display", "none");

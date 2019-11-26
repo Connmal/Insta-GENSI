@@ -244,7 +244,7 @@ var sourceId;
 
 // Handles node selections depending on the current slide
 function nodeSelect(d) {
-  
+
 
 
   // Do you consider them friends?
@@ -268,14 +268,14 @@ function nodeSelect(d) {
   if (currSlide == 9.5) {
     altered = true;
     if (d.name != "You") {
-      if (d.kids == "ja") {
+      if (d.kids == "Yes") {
         d3.select(this).style("fill", nodeColor)
         foci[d.id].y += 150;
-        d.kids = "nee";
+        d.kids = "No";
       } else {
         d3.select(this).style("fill", kidsColor)
         foci[d.id].y -= 150;
-        d.kids = "ja";
+        d.kids = "Yes";
       }
     }
     restart();
@@ -285,14 +285,14 @@ function nodeSelect(d) {
   if (currSlide == 13 && d.kids != "ja") {
     altered = true;
     if (d.name != "You") {
-      if (d.kinderwens == "ja") {
+      if (d.kinderwens == "Yes") {
         d3.select(this).style("fill", nodeColor)
         foci[d.id].y += 150;
-        d.kinderwens = "nee";
+        d.kinderwens = "No";
       } else {
         d3.select(this).style("fill", kinderwensColor)
         foci[d.id].y -= 150;
-        d.kinderwens = "ja";
+        d.kinderwens = "Yes";
       }
     }
     restart();
@@ -302,14 +302,14 @@ function nodeSelect(d) {
   if (currSlide == 14 && (d.kids != "ja" && d.kinderwens != "ja")) {
     altered = true;
     if (d.name != "You") {
-      if (d.kinderloos == "ja") {
+      if (d.kinderloos == "Yes") {
         d3.select(this).style("fill", nodeColor)
         foci[d.id].y += 150;
-        d.kinderloos = "nee";
+        d.kinderloos = "No";
       } else {
         d3.select(this).style("fill", kinderloosColor)
         foci[d.id].y -= 150;
-        d.kinderloos = "ja";
+        d.kinderloos = "Yes";
       }
     }
     restart();
@@ -319,14 +319,14 @@ function nodeSelect(d) {
   if (currSlide == 15) {
     altered = true;
     if (d.name != "You") {
-      if (d.kinderhulp == "ja") {
+      if (d.kinderhulp == "Yes") {
         d3.select(this).style("fill", nodeColor)
         foci[d.id].y += 150;
-        d.kinderhulp = "nee";
+        d.kinderhulp = "No";
       } else {
         d3.select(this).style("fill", kinderhulpColor)
         foci[d.id].y -= 150;
-        d.kinderhulp = "ja";
+        d.kinderhulp = "Yes";
       }
     }
     restart();
@@ -336,14 +336,14 @@ function nodeSelect(d) {
   if (currSlide == 16) {
     altered = true;
     if (d.name != "You") {
-      if (d.kinderpraat == "ja") {
+      if (d.kinderpraat == "Yes") {
         d3.select(this).style("fill", nodeColor)
         foci[d.id].y += 150;
-        d.kinderpraat = "nee";
+        d.kinderpraat = "No";
       } else {
         d3.select(this).style("fill", kinderpraatColor)
         foci[d.id].y -= 150;
-        d.kinderpraat = "ja";
+        d.kinderpraat = "Yes";
       }
     }
     restart();

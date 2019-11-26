@@ -178,6 +178,10 @@ g#0 {
   position: absolute;
   display: none;
 }
+#prol_input{
+  position: absolute;
+  display: none;
+}
 #age_input{
   position: absolute;
   display: none;

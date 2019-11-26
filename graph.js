@@ -5,14 +5,15 @@
 var svg = d3.select("body").append("svg")
   .attr("width", bodyWidth)
   .attr("height", bodyHeight)
+  .attr("height", bodyHeightone)
   .on("contextmenu", function() {d3.event.preventDefault()});
 
 var force = d3.layout.force()
-  .size([bodyWidth, bodyHeight])
-  .nodes([{x:-100, 
-            y:-100, 
-            fixed: true, 
-            name:"You", 
+  .size([bodyWidth, bodyHeight, bodyHeightone])
+  .nodes([{x:-100,
+            y:-100,
+            fixed: true,
+            name:"You",
             id:"0"}]) // initialize with a single node
   .linkDistance(100)
   .linkStrength(0)

@@ -424,119 +424,89 @@ labelBar1.append("text")
   .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 4 + (bar_target_width / 2) - 70)
   .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 
+  var labelBar2 = d3.select("svg").append("g")
+    .style("display", "none")
+    .attr("id", "labelBar2");
 
-var labelBar2 = d3.select("svg").append("g")
-  .style("display", "none")
-  .attr("id", "labelBar2");
+  labelBar2.append("rect")
+    .attr("class", "bar_label")
+    .attr("id", "basis_of_geen_onderwijs")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("x", boxbar_offset_x)
+    .attr("y", boxbar_offset_y - bar_label_height - boxbar_label_margin)
+    .attr("width", bar5_target_width)
+    .attr("height", bar_label_height);
 
-labelBar2.append("rect")
-  .attr("class", "bar_label")
-  .attr("id", "basis_of_geen_onderwijs")
-  .attr("rx", 4)
-  .attr("ry", 4)
-  .attr("x", boxbar_offset_x)
-  .attr("y", boxbar_offset_y - 1.7*bar_label_height - boxbar_label_margin)
-  .attr("width", bar5_target_width)
-  .attr("height", 1.7*bar_label_height);
+  labelBar2.append("text")
+    .attr("class", "bar_text")
+    .text("Primary/No education")
+    .attr("x", boxbar_offset_x + (bar_target_width / 2) - 75)
+    .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("Primary education")
-  .attr("x", boxbar_offset_x + (bar_target_width / 2) - 75)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - bar_label_height)
+  labelBar2.append("rect")
+    .attr("class", "bar_label")
+    .attr("id", "middelbaar_onderwijs")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("x", boxbar_offset_x + bar5_target_width + boxbar_margin)
+    .attr("y", boxbar_offset_y - bar_label_height - boxbar_label_margin)
+    .attr("width", bar5_target_width)
+    .attr("height", bar_label_height);
 
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("No education completed")
-  .attr("x", boxbar_offset_x + (bar_target_width / 2) - 80)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - 6)
+  labelBar2.append("text")
+    .attr("class", "bar_text")
+    .text("High School degree")
+    .attr("x", boxbar_offset_x + bar_target_width + boxbar_margin + (bar_target_width / 2) - 75)
+    .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 
-labelBar2.append("rect")
-  .attr("class", "bar_label")
-  .attr("id", "middelbaar_onderwijs")
-  .attr("rx", 4)
-  .attr("ry", 4)
-  .attr("x", boxbar_offset_x + bar5_target_width + boxbar_margin)
-  .attr("y", boxbar_offset_y - 1.7*bar_label_height - boxbar_label_margin)
-  .attr("width", bar5_target_width)
-  .attr("height", 1.7*bar_label_height);
+  labelBar2.append("rect")
+    .attr("class", "bar_label")
+    .attr("id", "mbo")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 2)
+    .attr("y", boxbar_offset_y - bar_label_height - boxbar_label_margin)
+    .attr("width", bar5_target_width)
+    .attr("height", bar_label_height);
 
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("High School degree")
-  .attr("x", boxbar_offset_x + bar_target_width + boxbar_margin + (bar_target_width / 2) - 85)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - bar_label_height);
+  labelBar2.append("text")
+    .attr("class", "bar_text")
+    .text("A-Level")
+    .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 2 + (bar_target_width / 2) - 10)
+    .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("(Or similair)")
-  .attr("x", boxbar_offset_x + bar_target_width + boxbar_margin + (bar_target_width / 2) - 92)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
+  labelBar2.append("rect")
+    .attr("class", "bar_label")
+    .attr("id", "hbo")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 3)
+    .attr("y", boxbar_offset_y - bar_label_height - boxbar_label_margin)
+    .attr("width", bar5_target_width)
+    .attr("height", bar_label_height);
 
-labelBar2.append("rect")
-  .attr("class", "bar_label")
-  .attr("id", "mbo")
-  .attr("rx", 4)
-  .attr("ry", 4)
-  .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 2)
-  .attr("y", boxbar_offset_y - 1.7*bar_label_height - boxbar_label_margin)
-  .attr("width", bar5_target_width)
-  .attr("height", 1.7*bar_label_height);
+  labelBar2.append("text")
+    .attr("class", "bar_text")
+    .text("Bachelor degree")
+    .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 3 + (bar_target_width / 2) - 75)
+    .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("A-Level")
-  .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 2 + (bar_target_width / 2) - 15)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - bar_label_height);
+  labelBar2.append("rect")
+    .attr("class", "bar_label")
+    .attr("id", "uni+")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 4)
+    .attr("y", boxbar_offset_y - bar_label_height - boxbar_label_margin)
+    .attr("width", bar5_target_width)
+    .attr("height", bar_label_height);
 
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("(Or similair)")
-  .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 2 + (bar_target_width / 2) - 92)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
-
-labelBar2.append("rect")
-  .attr("class", "bar_label")
-  .attr("id", "hbo")
-  .attr("rx", 4)
-  .attr("ry", 4)
-  .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 3)
-  .attr("y", boxbar_offset_y - 1.7*bar_label_height - boxbar_label_margin)
-  .attr("width", bar5_target_width)
-  .attr("height", 1.7*bar_label_height);
-
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("Bachelor degree")
-  .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 3 + (bar_target_width / 2) - 15)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - bar_label_height);
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("(Or similair)")
-  .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 3 + (bar_target_width / 2) - 92)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
-
-labelBar2.append("rect")
-  .attr("class", "bar_label")
-  .attr("id", "uni+")
-  .attr("rx", 4)
-  .attr("ry", 4)
-  .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 4)
-  .attr("y", boxbar_offset_y - 1.7*bar_label_height - boxbar_label_margin)
-  .attr("width", bar5_target_width)
-  .attr("height", 1.7*bar_label_height);
-
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("University or higher")
-  .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 4 + (bar_target_width / 2) - 65)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - bar_label_height);
-
-labelBar2.append("text")
-  .attr("class", "bar_text")
-  .text("(Or similair)")
-  .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 4 + (bar_target_width / 2) - 92)
-  .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
+  labelBar2.append("text")
+    .attr("class", "bar_text")
+    .text("University or higher")
+    .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 4 + (bar_target_width / 2) - 65)
+    .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 
 
 var labelBar3 = d3.select("svg").append("g")
@@ -609,7 +579,7 @@ labelBar3.append("text")
 
 labelBar3.append("rect")
   .attr("class", "bar_label")
-  .attr("id", "paar_keer_per_jaar")     
+  .attr("id", "paar_keer_per_jaar")
   .attr("rx", 4)
   .attr("ry", 4)
   .attr("x", boxbar_offset_x + (bar5_target_width + boxbar_margin) * 4)

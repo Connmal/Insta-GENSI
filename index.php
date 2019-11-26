@@ -24,7 +24,8 @@
       function unhook() {
         hook=false;
       }
-
+      var bodyHeightone = $(document).height() - 20;
+      if (bodyHeightone < 2600) bodyHeightone = 3000;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -97,12 +98,32 @@
     <script src="shownext.js"></script>
     <script src="keypress.js"></script>
 
-    <div class="input-group" id="code_input" method="get" display="none" onsubmit ="return false;">
-      <form id="CodeID">
-      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study. (Make sure it is not your email or any other personally identifiable information)</span>
-        <input type="text" name="code" class="form-control" placeholder="..." size="10"><br><br>
-      </form>
-      </div>
+
+
+      <div class="input-group" id="code_input" method="get" display="none" onsubmit ="return false;">
+        <form id="codeID">
+        <span class="slideText">Please check the circle and enter  code that you will remember in case you wish to withdraw your data from this study (Make sure it is not your email or any other personally identifiable information).</span><br><br>
+        <input type="radio" id="codeText" name="code" value="1"><label for="codecheckText"><span class="questionText"> Enter your code here:</span>
+        <input type="text" id="codetextInput" name="code">
+        </form>
+        </div>
+
+      <div class="input-group" id="prol_input" method="get" display="none" onsubmit ="return false;">
+        <form id="prolID">
+        <span class="slideText">Please check the circle and enter your prolific details to make sure you are reimbursed for taking part in the study.</span><br><br>
+        <input type="radio" id="prolText" name="pr" value="1"><label for="prolcheckText"><span class="questionText"> Enter your prolific code here:</span>
+        <input type="text" id="proltextInput" name="pr">
+        </form>
+        </div>
+
+        <div class="input-group" id="age_input" method="get" display="none" onsubmit ="return false;">
+          <form id="ageID">
+          <span class="slideText">Please check the circle and enter your age in years. Use a numerical value. (For example : 21).</span><br><br>
+          <input type="radio" id="ageText" name="age" value="1"><label for="agecheckText"><span class="questionText"> Enter your age here:</span>
+          <input type="text" id="agetextInput" name="age">
+          </form>
+          </div>
+
 
     </div>
     <div class="input-group" display="none" id="gender_input" method="get">
@@ -114,14 +135,6 @@
         <input type="radio" name="gender" value="Prefer_Not_To_Say"><span class="questionText"> Prefer Not To Say</span><br>
       </form>
     </div>
-
-    <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
-      <form id="AgeID">
-      <span class="slideText">Please state your age in years. Use a numerical value. (For example : 21)</span>
-        <input type="text" name="age" class="form-control" placeholder="" size="10"><br><br>
-        </form>
-      </div>
-
 
   </div>
   <div class="input-group" display="none" id="nation_input" method="get">
@@ -428,7 +441,7 @@
       <form id="ins2user">
         <span class="slideText">Tag others in your posts or comments.</span><br><br>
         <input type="radio" name="in2" value="Always"><span class="questionText">  Always</span><br>
-        <input type="radio" name="in1" value="Often"><span class="questionText">  Often</span><br>
+        <input type="radio" name="in2" value="Often"><span class="questionText">  Often</span><br>
         <input type="radio" name="in2" value="Sometimes"><span class="questionText">  Sometimes </span><br>
         <input type="radio" name="in2" value="Rarely"><span class="questionText">  Rarely</span><br>
         <input type="radio" name="in2" value="Never"><span class="questionText">  Never</span><br>
