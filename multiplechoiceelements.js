@@ -504,7 +504,7 @@ labelBar1.append("text")
 
   labelBar2.append("text")
     .attr("class", "bar_text")
-    .text("University or higher")
+    .text("Postgraduate or higher")
     .attr("x", boxbar_offset_x + (bar_target_width + boxbar_margin) * 4 + (bar_target_width / 2) - 65)
     .attr("y", boxbar_offset_y - boxbar_label_margin - 6);
 

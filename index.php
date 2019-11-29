@@ -25,7 +25,7 @@
         hook=false;
       }
       var bodyHeightone = $(document).height() - 20;
-      if (bodyHeightone < 2600) bodyHeightone = 3000;
+      if (bodyHeightone < 2800) bodyHeightone = 3200;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -216,7 +216,7 @@
         <input type="checkbox" name="rA" value="9" id="rA9"><label for="rA9"><span class="questionText">  From studying</span></label><br>
         <input type="checkbox" name="rA" value="10" id="rA10"><label for="rA10"><span class="questionText">  Via work</span></label><br>
         <input type="checkbox" name="rA" value="11" id="rA11"><label for="rA11"><span class="questionText">  Via social activity (sport, hobby)</span></label><br>
-        <input type="checkbox" name="rA" value="12" id="rA12"><label for="rA12"><span class="questionText">  Via a common friend)</span></label><br>
+        <input type="checkbox" name="rA" value="12" id="rA12"><label for="rA12"><span class="questionText">  Via a common friend</span></label><br>
         <input type="checkbox" name="rA" value="13" id="rA13"><label for="rA13"><span class="questionText">  Neighbour</span></label><br>
         <input type="checkbox" id="rAcheckText" name="rA" value="14"><label for="rAcheckText"><span class="questionText">  In a different way, namely:</span></label><br>
         <input type="text" id="rAtextInput" name="rA">
@@ -493,7 +493,7 @@
       <form id="had1user" >
         <span class="slideText">I feel tense or 'wound up'</span><br><br>
         <input type="radio" name="ha1" value="3"><span class="questionText">  Most of the time</span><br>
-        <input type="radio" name="ha1" value="2"><span class="questionText">  Alot of the time</span><br>
+        <input type="radio" name="ha1" value="2"><span class="questionText">  A lot of the time</span><br>
         <input type="radio" name="ha1" value="1"><span class="questionText">  From time to time, occasionally</span><br>
         <input type="radio" name="ha1" value="0"><span class="questionText"> Not at all </span><br>
       </form>

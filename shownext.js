@@ -24,11 +24,34 @@ function showNext() {
            document.getElementById("slide1").style.display = "none";
            document.getElementById("slide2").style.display = "block"
 
-           currSlide+= 0.4;
+           currSlide+= 0.2;
+
+
+  } else if (currSlide == 1.3) {
+      document.getElementById("slide2").style.display = "none"
+      var ex = document.getElementById("code_input");
+      ex.style.left = string_l + "px";
+      ex.style.top = string_t;
+      ex.style.display = "block";
+      checked = false;
+
+      currSlide += 0.2;
 
 
   } else if (currSlide == 1.5) {
-      document.getElementById("slide2").style.display = "none"
+      if (($('input[name=code]:checked').val() == 1 && $('input#codetextInput').val() == "") || ($('input[name=code]:checked').length == 0) && !checked) {
+        promptNonresponse();
+        checked = true;
+      } else {
+        // Collect data before going on
+        answers.q18 = $('input[name=code]:checked').val();
+        if ($('input[name=code]:checked').val() == 1) answers.q18 += ":" + $('input#codetextInput').val();
+        var d = new Date();
+        answers.q18timeStamp = (d - startTime) / 1000;
+          // Collect data before going on
+
+       document.getElementById("code_input").style.display = "none";
+
 
     d3.selectAll(".node").attr("display", "block");
     d3.selectAll(".node").on('mousedown.drag', null);
@@ -65,6 +88,7 @@ function showNext() {
     d3.selectAll(".node").attr("opacity", "0.4");
 
     currSlide += 0.5;
+  }
   } else if (currSlide == 2) {
     if (numAlters < 25 && checked == false) {
       checked = numAlters < 1 ? false : true;
@@ -757,10 +781,10 @@ document.getElementById("slide14").style.display = "block";
         ex.style.display = "block";
 
 
-        currSlide+= 0.3;
+        currSlide+= 0.2;
 
 }
-    } else if (currSlide == 17.6) {
+} else if (currSlide == 17.5) {
 
       if (($('input[name=gender]:checked').length == 0)  && !checked && !skipped) {
         promptNonresponse();
@@ -780,15 +804,38 @@ document.getElementById("slide14").style.display = "block";
 
 
         document.getElementById("gender_input").style.display = "none";
-       var ex = document.getElementById("loneliness1");
-       ex.style.left = string_l + "px";
-       ex.style.top = string_t;
-       ex.style.display = "block";
+     var ex = document.getElementById("nation_input");
+     ex.style.left = string_l + "px";
+     ex.style.top = string_t;
+     ex.style.display = "block";
+     checked = false;
 
-       checked = false
+     currSlide += 0.2;
+   }
 
-       currSlide+= 0.4;
-     }
+ } else if (currSlide == 17.7) {
+   if (($('input[name=nation]:checked').val() == 1 && $('input#nationtextInput').val() == "") || ($('input[name=nation]:checked').length == 0) && !checked) {
+     promptNonresponse();
+     checked = true;
+   } else {
+     // Collect data before going on
+     answers.q36_C = $('input[name=nation]:checked').val();
+     if ($('input[name=nation]:checked').val() == 1) answers.q36_C += ":" + $('input#nationtextInput').val();
+     var d = new Date();
+     answers.q36_CtimeStamp = (d - startTime) / 1000;
+       // Collect data before going on
+
+     document.getElementById("nation_input").style.display = "none";
+     var ex = document.getElementById("loneliness1");
+     ex.style.left = string_l + "px";
+     ex.style.top = string_t;
+     ex.style.display = "block";
+
+     checked = false
+
+     currSlide+= 0.3;
+
+   }
 
   } else if (currSlide == 18) {
     if (($('input[name=lo1]:checked').length == 0 || $('input[name=lo2]:checked').length == 0) && !checked && !skipped) {
@@ -1382,50 +1429,6 @@ document.getElementById("slide14").style.display = "block";
 
 
       document.getElementById("HADS13").style.display = "none";
-      var ex = document.getElementById("code_input");
-      ex.style.left = string_l + "px";
-      ex.style.top = string_t;
-      ex.style.display = "block";
-      checked = false;
-
-      currSlide += 0.5;
-    }
-
-    } else if (currSlide == 37.5) {
-      if (($('input[name=code]:checked').val() == 1 && $('input#codetextInput').val() == "") || ($('input[name=code]:checked').length == 0) && !checked) {
-        promptNonresponse();
-        checked = true;
-      } else {
-        // Collect data before going on
-        answers.q56_5 = $('input[name=code]:checked').val();
-        if ($('input[name=code]:checked').val() == 1) answers.q56_5 += ":" + $('input#codetextInput').val();
-        var d = new Date();
-        answers.q56_5timeStamp = (d - startTime) / 1000;
-          // Collect data before going on
-
-          document.getElementById("code_input").style.display = "none";
-        var ex = document.getElementById("prol_input");
-        ex.style.left = string_l + "px";
-        ex.style.top = string_t;
-        ex.style.display = "block";
-        checked = false;
-
-        currSlide += 0.25;
-      }
-
-    } else if (currSlide == 37.75) {
-      if (($('input[name=pr]:checked').val() == 1 && $('input#proltextInput').val() == "") || ($('input[name=pr]:checked').length == 0) && !checked) {
-        promptNonresponse();
-        checked = true;
-      } else {
-        // Collect data before going on
-        answers.q57 = $('input[name=pr]:checked').val();
-        if ($('input[name=pr]:checked').val() == 1) answers.q57 += ":" + $('input#proltextInput').val();
-        var d = new Date();
-        answers.q57timeStamp = (d - startTime) / 1000;
-          // Collect data before going on
-
-          document.getElementById("prol_input").style.display = "none";
         var ex = document.getElementById("bronnen");
         ex.style.left = string_l + "px";
         ex.style.top = string_t;
@@ -1434,7 +1437,7 @@ document.getElementById("slide14").style.display = "block";
         checked = false;
 
 
-      currSlide+= 0.25;
+      currSlide++;
     }
   } else if (currSlide == 38) {
     if (($('input[name=br]:checked').val() == 5 && $('input#brtextInput').val() == "") || ($('input[name=br]:checked').length == 0) && !checked) {
@@ -1448,9 +1451,31 @@ document.getElementById("slide14").style.display = "block";
       answers.q57_5timeStamp = (d - startTime) / 1000;
 
       document.getElementById("bronnen").style.display = "none";
+      var ex = document.getElementById("prol_input");
+      ex.style.left = string_l + "px";
+      ex.style.top = string_t;
+      ex.style.display = "block";
+      checked = false;
+
+      currSlide += 0.5;
+    }
+
+  } else if (currSlide == 38.5) {
+    if (($('input[name=pr]:checked').val() == 1 && $('input#proltextInput').val() == "") || ($('input[name=pr]:checked').length == 0) && !checked) {
+      promptNonresponse();
+      checked = true;
+    } else {
+      // Collect data before going on
+      answers.q57 = $('input[name=pr]:checked').val();
+      if ($('input[name=pr]:checked').val() == 1) answers.q57 += ":" + $('input#proltextInput').val();
+      var d = new Date();
+      answers.q57timeStamp = (d - startTime) / 1000;
+        // Collect data before going on
+
+      ocument.getElementById("prol_input").style.display = "none";
       document.getElementById("NextDiv").style.display = "none";
       document.getElementById("submitForm").style.display = "block";
-      currSlide++;
+      currSlide+= 0.5;
 
       showNext();
     }
