@@ -140,11 +140,11 @@
   <div class="input-group" display="none" id="nation_input" method="get">
     <form id="nationuser" display="none">
       <span class="slideText">Please select your nationality.</span><br><br>
-      <input type="radio" name="nation" value="British"><span class="questionText"> British</span><br>
-      <input type="radio" name="nation" value="American"><span class="questionText"> American </span><br>
-      <input type="radio" name="nation" value="Other"><span class="questionText"> Other</span><br>
-      <input type="radio" name="nation" value="Prefer_Not_To_Say"><span class="questionText"> Prefer Not To Say</span><br>
-
+      <input type="radio" name="nation" value="1"><span class="questionText"> British</span><br>
+      <input type="radio" name="nation" value="2"><span class="questionText"> American </span><br>
+      <input type="radio" name="nation" value="3"><span class="questionText"> Prefer Not To Say</span><br>
+      <input type="radio" id="nationText" name="nation" value="4"><label for="nationcheckText"><span class="questionText"> If other, state here:</span>
+      <input type="text" id="nationtextInput" name="nation">
     </form>
   </div>
 
