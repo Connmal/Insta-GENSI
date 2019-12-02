@@ -164,6 +164,7 @@
 
     <div class="input-group" id="leeftijdAlter" method="get">
       <form id="leeftijdAltr">
+        <input type="radio" name="lA" value="18" id="lA18"><label for="lA<18"><span class="questionText"> Under 18</span></label><br>
         <input type="radio" name="lA" value="18" id="lA18"><label for="lA18"><span class="questionText">  18</span></label><br>
         <input type="radio" name="lA" value="19" id="lA19"><label for="lA19"><span class="questionText">  19</span></label><br>
         <input type="radio" name="lA" value="20" id="lA20"><label for="lA20"><span class="questionText">  20</span></label><br>
@@ -197,7 +198,7 @@
         <input type="radio" name="lA" value="48" id="lA48"><label for="lA48"><span class="questionText">  48</span></label><br>
         <input type="radio" name="lA" value="49" id="lA49"><label for="lA49"><span class="questionText">  49</span></label><br>
         <input type="radio" name="lA" value="50" id="lA50"><label for="lA50"><span class="questionText">  50</span></label><br>
-        <input type="radio" name="lA" value="50+" id="lA50+"><label for="lA50+"><span class="questionText">  50+</span></label>
+        <input type="radio" name="lA" value="50+" id="lA50+"><label for="lA50+"><span class="questionText"> Over 50</span></label>
       </form>
     </div>
 

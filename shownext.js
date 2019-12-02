@@ -1472,7 +1472,8 @@ document.getElementById("slide14").style.display = "block";
       answers.q57timeStamp = (d - startTime) / 1000;
         // Collect data before going on
 
-      ocument.getElementById("prol_input").style.display = "none";
+      document.getElementById("prol_input").style.display = "none";
+
       document.getElementById("NextDiv").style.display = "none";
       document.getElementById("submitForm").style.display = "block";
       currSlide+= 0.5;
